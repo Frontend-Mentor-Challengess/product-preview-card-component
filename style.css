@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,700;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;1,9..144,700&display=swap");
+
+:root {
+  --primary-dark-cyan: hsl(158, 36%, 37%);
+  --primary-cream: hsl(30, 38%, 92%);
+
+  --neutral-very-dark-blue: hsl(212, 21%, 14%);
+  --neutral-dark-grayish-blue: hsl(228, 12%, 48%);
+  --neutral-white: hsl(0, 0%, 100%);
+
+  --montserrat500: 500;
+  --montserrat700: 700;
+
+  --fraunces: 700;
+}
+
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/* *Media Queries */
+
+/*
+/* Desktop (900px - 1200px) */
+/* @media (min-width: 900px) and (max-width: 1200px) {
+} */
+
+/* Large Desktop (1200px and up) */
+/* @media (min-width: 1200px) {
+}  */
+body {
+  font-size: 14px;
+  background-color: var(--primary-cream);
+}
+main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  background-color: var(--neutral-white);
+  height: 85vh;
+  display: flex;
+  width: 50vw;
+  border-radius: 10px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.pro-img {
+  height: 85vh;
+  flex-basis: 55%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.pro-img img {
+  border-radius: 10px 0 0 10px;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.content {
+  flex-basis: 45%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+  padding: 4.5vh 2vw;
+  flex-shrink: 0;
+}
+
+.perfume {
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-size: var(--montserrat500);
+  color: var(--neutral-dark-grayish-blue);
+  letter-spacing: 0.539rem;
+}
+
+.title {
+  font-family: "Fraunces", serif;
+  color: var(--neutral-very-dark-blue);
+}
+
+.text {
+  font-family: "Montserrat", sans-serif;
+  font-size: var(--montserrat500);
+  color: var(--neutral-dark-grayish-blue);
+}
+.price {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.sp-price {
+  font-family: "Fraunces", serif;
+  color: var(--primary-dark-cyan);
+  font-size: xx-large;
+}
+.old-price {
+  color: var(--neutral-dark-grayish-blue);
+  text-decoration: line-through;
+  font-family: "Montserrat", sans-serif;
+  margin-left: auto;
+  padding-right: 2.6vw;
+}
+
+.btn {
+  background-color: var(--primary-dark-cyan);
+  font-family: "Montserrat", sans-serif;
+  color: var(--primary-cream);
+  border: 0;
+  border-radius: 10px;
+  height: 9vh;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: hsl(158, 36%, 30%);
+}
+
+.btn[data-icon="shopping-cart"]::before {
+  content: "";
+  background-image: url(/images/icon-cart.svg);
+  width: 15px;
+  height: 16px;
+  margin-right: 1vw;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  /* margin-top: -4vh; */
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 600px) {
+  .container {
+    margin-top: 10vh;
+    flex-direction: column;
+    height: auto;
+    width: 90vw;
+  }
+  .attribution {
+    margin-top: 8vh;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+  .container {
+    width: 90vw;
+    height: auto;
+  }
+}
