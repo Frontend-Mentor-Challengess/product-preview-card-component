@@ -203,8 +203,19 @@ main {
   .container {
     margin-top: 10vh;
     flex-direction: column;
-    height: auto;
+    height:max-content;
     width: 90vw;
+  }
+
+  .pro-img img{
+    border-radius: 10px 10px 0 0;
+  }
+  .content{
+    padding: 4vh 6vw;
+    justify-content: space-evenly;
+  }
+  .old-price{
+    padding-right: 30vw;
   }
   .attribution {
     margin-top: 8vh;
